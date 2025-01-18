@@ -18,7 +18,7 @@ class BPE:
         for word in clean_text.split():
             word += "_"
             freqs[word] += 1
-        
+
         return freqs
 
     def find_pairs(self):
@@ -54,7 +54,7 @@ class BPE:
             
             if not pair_freqs:
                 break
-                
+
             best_pair = max(pair_freqs.items(), key=lambda x: x[1])[0]
             merged_token = ''.join(best_pair)
             
